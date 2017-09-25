@@ -78,8 +78,10 @@ export var InnerSlider = createReactClass({
     }
     if (window.addEventListener) {
       window.addEventListener('resize', this.onWindowResized);
+      window.addEventListener('orientationchange', this.onWindowResized);
     } else {
       window.attachEvent('onresize', this.onWindowResized);
+      window.attachEvent('onorientationchange', this.onWindowResized);
     }
   },
   componentWillUnmount: function componentWillUnmount() {
